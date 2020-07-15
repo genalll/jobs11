@@ -1,0 +1,24 @@
+@media screen and (max-width: 980px) {
+  .button.user-info__buttonedit {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left:auto;
+    margin-right: auto;
+  }
+} 
+
+.button.user-info__buttonedit{
+    margin-top: 24px;
+    width: 38px;
+    height: 18px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    
+    color: #FFFFFF;
+}
+
+

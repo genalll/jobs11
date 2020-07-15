@@ -1,0 +1,5 @@
+.button.popup__button_active{
+    color: white;
+    background-color: black;
+    opacity: 1;
+}

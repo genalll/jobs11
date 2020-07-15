@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mesto</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+<body>
+  <div class="root">
+    <header class="header root__section">
+      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+    </header>
+    <div class="profile root__section">
+      <div class="user-info">
+        <div class="user-info__photo"></div>
+        <div class="user-info__data">
+          <h1 class="user-info__name"></h1>
+          <p class="user-info__job"></p>
+          <button class="button user-info__buttonedit" id="userinfoeditbutton">Edit</button>
+        </div>
+        <button class="button user-info__button" id="popupaddopen">+</button>
+      </div>
+    </div>
+
+    <div class="places-list root__section">
+
+
+
+    </div>
+
+    <div class="popup" id="popupadd">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" class="popup__close" id="popupclosebutton">
+        <h3 class="popup__title">Новое место</h3>
+        <form class="popup__form" name="new" novalidate>
+            <input type="text" name="name" class="popup__input popup__input_type_name" minlength="2" maxlength="30" required placeholder="Название">
+            <span id="plac-name-eror" class="eror"></span>
+            <input  name="link" class="popup__input popup__input_type_link-url" type="url" required placeholder="Ссылка на картинку">
+            <span id="linck-name-eror" class="eror"></span>
+            <button type="submit" class="button popup__button popup__button_active" name="submit">+</button>
+        </form>
+      </div>
+    </div>
+
+
+    <div class="popup" id="popupedit">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" class="popup__close" id="popupeditclosebutton">
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <form class="popup__form" name="edit" novalidate>
+            <input type="text" name="name" class="popup__input popup__input_type_name" required minlength="2" maxlength="30" placeholder="Имя">
+            <span id="user-name-eror" class="eror"></span>
+            <input type="text" name="job" class="popup__input popup__input_type_link-url" required minlength="2" maxlength="30" placeholder="О себе">
+            <span id="job-name-eror" class="eror"></span>
+            <button type="submit" class="button popup__button popup__button_edit popup__button_active" name="submit" >Сохранить</button>
+        </form>
+      </div>
+    </div>
+
+
+  <div class="imagepopup">
+   <img src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg" alt="большая картинка" id="image">
+   <img src="./images/close.svg" alt="" class="popup__close" id="popupimgclose">
+  </div>
+
+
+  </div>
+  
+  <script src="formvalidator.js"></script>
+  <script src="userInfo.js"></script>
+  <script src="cardList.js"></script>
+  <script src="card.js"></script>
+  <script src="api.js"></script>
+  <script src="script.js"></script>
+  <script src="popup.js"></script>
+  
+  
+  
+
+</body>
+</html>

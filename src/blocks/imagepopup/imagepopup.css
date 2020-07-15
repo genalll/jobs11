@@ -1,0 +1,13 @@
+@import url(./_image_isopened.css/image_isopened.css);
+
+.imagepopup{
+    position: fixed;
+    top: 78px;
+    left:50%;
+    transform: translateX(-50%);
+    max-width: 80vw;
+    align-items: center;
+    justify-content: center;
+    display:none;
+}
+
