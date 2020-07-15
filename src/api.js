@@ -39,6 +39,7 @@ class Api {
   }
 }
 
+export {Api};
 
 
 

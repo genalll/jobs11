@@ -1,4 +1,15 @@
-(function () {
+import {UserInfo} from "./userInfo.js";
+import {Popup} from "./popup.js";
+import {FormValidator} from "./formvalidator";
+import {CardList} from "./cardList";
+import {Card} from "./card.js";
+import {Api} from "./api.js";
+import "./pages/index.css";
+
+function script() {
+
+
+
     const palaceContener = document.querySelector(".places-list");
     const popupAddElement = document.querySelector("#popupadd");
     const imagePopupElement = document.querySelector(".imagepopup");
@@ -135,8 +146,9 @@
 
     formValid.valid();
     formValidEdit.valid();
-})();
-
+};
+script();
+export {script};
 
 /*
     Неплохая работа, класс Api создан, запросы на сервер отправляются, данные

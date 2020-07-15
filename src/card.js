@@ -69,3 +69,4 @@ class Card {
         this.removeListeners();
     }
 }
+export {Card};

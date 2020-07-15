@@ -29,3 +29,4 @@ class Popup {
     
 
 }
+export {Popup};
