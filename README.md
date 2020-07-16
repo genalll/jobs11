@@ -1,9 +1,10 @@
 # job11
  [Проект место]
 Учебный проект в рамках яндекс практикума.
+<a href="https://genalll.github.io/jobs11/">Cсылка на проект </a>
 ---  
 
-Версия 1.0.0
+Версия v1.0.1 
  
 Клонируем репозиторий командой:
 git clone https://github.com/genalll/job11.git
