@@ -9,7 +9,7 @@ import "./pages/index.css";
 function script() {
 
 
-
+    const server = NODE_ENV=== "development" ? "http://praktikum.tk/..." : "https://praktikum.tk/...";
     const palaceContener = document.querySelector(".places-list");
     const popupAddElement = document.querySelector("#popupadd");
     const imagePopupElement = document.querySelector(".imagepopup");
@@ -22,7 +22,7 @@ function script() {
 
     /* Можно лучше: fetche => mestoApi , так название более информативно */
     const fetche = new Api({
-        baseUrl: 'https://praktikum.tk/cohort11',
+        baseUrl: server+"/cohort11",
         headers: {
             authorization: 'c0e103a1-800b-46bf-b7a3-9cc40f123c72',
             'Content-Type': 'application/json'
