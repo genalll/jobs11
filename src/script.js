@@ -1,4 +1,15 @@
-(function () {
+import {UserInfo} from "./userInfo.js";
+import {Popup} from "./popup.js";
+import {FormValidator} from "./formvalidator";
+import {CardList} from "./cardList";
+import {Card} from "./card.js";
+import {Api} from "./api.js";
+import "./pages/index.css";
+
+function script() {
+
+
+    const server = NODE_ENV=== "development" ? "http://praktikum.tk/" : "https://praktikum.tk/";
     const palaceContener = document.querySelector(".places-list");
     const popupAddElement = document.querySelector("#popupadd");
     const imagePopupElement = document.querySelector(".imagepopup");
@@ -7,11 +18,8 @@
     const heroJob = document.querySelector(".user-info__job");
     const heroAvatar = document.querySelector(".user-info__photo");
     const info = new UserInfo(heroName, heroJob);
-    // АПИ !
-
-    /* Можно лучше: fetche => mestoApi , так название более информативно */
     const fetche = new Api({
-        baseUrl: 'https://praktikum.tk/cohort11',
+        baseUrl: server+"cohort11",
         headers: {
             authorization: 'c0e103a1-800b-46bf-b7a3-9cc40f123c72',
             'Content-Type': 'application/json'
@@ -135,60 +143,7 @@
 
     formValid.valid();
     formValidEdit.valid();
-})();
-
-
-/*
-    Неплохая работа, класс Api создан, запросы на сервер отправляются, данные
-    пользователя сохраняются, но по организации кода есть несколько замечаний:
-
-    Надо исправить:
-    - проверку ответа сервера и преобразование из json перенести в класс Api в отдельный метод
-    и вызывать его там же, из методов запросов же будут возвращаться уже готовые данные +
-    - если res.ok === false нужно возвращать отклоненный промис +
-    - все действия на странице должны происходить после того как сервер ответил подтверждением, в
-    том числе закрытие попапа +
-
-*/
-
-
-/*
-  Отлично, замечания исправлены
-
-  Для закрепления полученных знаний советую сделать и оставшуюся часть задания.
-
-  Если у Вас будет свободное время попробуйте освоить работу с сервером
-  применив async/await для работы с асинхронными запросами.
-  https://learn.javascript.ru/async-await
-  https://habr.com/ru/company/ruvds/blog/414373/
-  https://www.youtube.com/watch?v=SHiUyM_fFME
-  Это часто используется в реальной работе
-
-  Успехов в дальнейшем обучении!
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-/** REVIEW:
- * В целом по работе:
- *
- * Все критические ошибки были исправлены, отличная работа! Работа принята, пасибо за усилия и старания, удачи в следующем спринте
- *
- * Можно лучше: 1) В названии файла использовать не arr.js, а например cards.js или initialCards.js
- * 2) Использовать интерполяцию строк и стрелочные функции ES6
- * 3) В классе Card вынести добавление обработчиков в отдельный метод, например addEventListeners
- * 4) Вынести все js фалы в отдельную папку в корне проекта с названием scripts
- */
-
-
+};
+script();
+export {script};
 

@@ -17,3 +17,4 @@ class UserInfo {
 
   }
 }
+export {UserInfo};
