@@ -10,7 +10,9 @@
 git clone https://github.com/genalll/job11.git
 
 Введите в консоли команду:
-npm run dev
+npm install для установки зависимостей.
+npm run build для сборки проекта.
+npm run dev проект запустится.
 
 откройте страницу по адресу.
 http://localhost:8080/
